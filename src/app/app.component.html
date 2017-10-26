@@ -12,17 +12,35 @@
   </div>
 </nav>
 <div
+  class="fullpage"
   [mnFullpage]="options"
   [mnFullpageNavigation]="true"
   [mnFullpageKeyboardScrolling]="true">
   <div class="section fp-section fp-table" data-anchor="home">
-    <div class="fp-tableCell" style="background-color: blue">
-      Section 1
+    <div class="fp-tableCell">
+      <div class="page">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-lg-5 text-center">
+              <img src="http://via.placeholder.com/200x200" class="rounded-circle me" />
+            </div>
+            <div class="col-md-8 col-lg-7">
+              <div class="code-block rounded">
+                Hello World
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="section fp-section fp-table" data-anchor="projects">
     <div class="fp-tableCell" style="background-color: red">
-      Section 2
+      <div class="page">
+        <div class="container">
+          Section 2
+        </div>
+      </div>
     </div>
   </div>
   <div class="section fp-section fp-table">
