@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { MnFullpageModule } from 'ngx-fullpage';
+import { TypingAnimationDirective } from 'angular-typing-animation';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TypingAnimationDirective
   ],
   imports: [
     BrowserModule,
