@@ -1,0 +1,79 @@
+$code-font: monaco, Consolas, "Lucida Console", monospace;
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+      @content
+  }
+  @-moz-keyframes #{$name} {
+      @content
+  }
+  @-ms-keyframes #{$name} {
+      @content
+  }
+  @-o-keyframes #{$name} {
+      @content
+  }
+  @keyframes #{$name} {
+      @content
+  }
+}
+
+.me {
+  width: 250px;
+}
+.hello {
+  color: lightgray;
+
+  h1 {
+    font-weight: 500;
+  }
+}
+.code-block {
+  div {
+    max-width: 600px;
+  }
+}
+.code-box {
+  font-family: $code-font;
+  font-size: 16px;
+  min-height: 200px;
+  padding: 30px 40px;
+  border-radius: 25px;
+  background-color: #eee;
+}
+.typed-cursor {
+  opacity: 1;
+  @include keyframes(blink) {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  };
+  @include animation(blink 0.7s infinite);
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .me {
+    width: 200px;
+  }
+  .code-block {
+    div {
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 757px) {
+  .me {
+    width: 150px;
+  }
+  .code-box {
+    padding: 20px;
+    font-size: 14px;
+  }
+}

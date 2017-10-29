@@ -1,0 +1,46 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+}
+.logo {
+  width: 50px;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    .nav-link {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    .nav-link {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+@media (max-width: 757px) {
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    .nav-link {
+      padding: 0.5rem 1rem;
+    }
+  }
+}

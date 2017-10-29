@@ -12,7 +12,9 @@ export class AppComponent implements OnInit {
     menu: '.menu',
     css3: true,
     scrollingSpeend: 1000,
-    anchors: ['hello', 'projects']
+    anchors: ['hello', 'projects'],
+    navigation: true,
+    navPosition: 'right'
   });
 
   constructor(public fullpageService: MnFullpageService) { }
