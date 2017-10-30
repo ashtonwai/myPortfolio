@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { MnFullpageService, MnFullpageOptions } from 'ngx-fullpage';
 import Typed from 'typed.js';
 
 @Component({
   selector: 'app-root',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -13,8 +14,7 @@ export class AppComponent implements OnInit {
     css3: true,
     scrollingSpeend: 1000,
     anchors: ['hello', 'projects'],
-    navigation: true,
-    navPosition: 'right'
+    controlArrows: false
   });
 
   constructor(public fullpageService: MnFullpageService) { }

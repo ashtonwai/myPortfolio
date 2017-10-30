@@ -2,8 +2,9 @@
 <div
   class="fullpage"
   [mnFullpage]="options"
-  [mnFullpageNavigation]="true"
-  mnFullpageNavPosition="right" >
+  [mnFullpageKeyboardScrolling]="true"
+  [mnFullpageSlidesNavigation]="true"
+  mnFullpageSlidesNavPosition="bottom">
   <div class="section fp-section fp-table" data-anchor="hello">
     <div class="fp-tableCell">
       <div class="page">
@@ -14,7 +15,9 @@
   <div class="section fp-section fp-table" data-anchor="projects">
     <div class="fp-tableCell">
       <div class="slide">
-        Slide 1
+        <div class="container">
+          <h1 class="display-4">Organic Shop</h1>
+        </div>
       </div>
       <div class="slide">
         Slide 2
@@ -22,3 +25,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

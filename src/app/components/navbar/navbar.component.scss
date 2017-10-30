@@ -1,8 +1,31 @@
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
 .navbar {
   position: absolute;
   width: 100%;
   z-index: 100;
   background-color: transparent;
+}
+.nav-item {
+  width: 100px;
+  margin: 0 0.5rem;
+  text-align: center;
+  &::after {
+    display: block;
+    width: 0;
+    border-bottom: 2px solid black;
+    content: '';
+    @include transition(width .3s);
+  }
+  &.active::after, &:hover::after {
+    width: 100%;
+  }
 }
 .logo {
   width: 50px;
