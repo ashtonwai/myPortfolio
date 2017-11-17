@@ -1,5 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { MnFullpageOptions, MnFullpageService } from 'ngx-fullpage';
+import { ProjectService } from '../../services/project.service';
 
 @Component({
   selector: 'app-fullpage',
@@ -15,6 +16,11 @@ export class FullpageComponent {
     anchors: ['hello', 'projects'],
     controlArrows: false
   });
+  projects$;
 
-  constructor(public fullpageService: MnFullpageService) { }
+  constructor(
+    public fullpageService: MnFullpageService,
+    private projectService: ProjectService) {
+    this.projects$ = projectService.getAll();
+  }
 }
