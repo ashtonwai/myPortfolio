@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { MnFullpageModule } from 'ngx-fullpage';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from '../environments/environment';
 
 import { ProjectService } from './services/project.service';
@@ -25,7 +26,8 @@ import { HelloComponent } from './components/fullpage/hello/hello.component';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    MnFullpageModule.forRoot()
+    MnFullpageModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [ProjectService],
   bootstrap: [AppComponent]

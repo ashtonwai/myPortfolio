@@ -30,7 +30,9 @@ $code-font: monaco, Consolas, "Lucida Console", monospace;
 }
 .hello {
   color: lightgray;
-
+  i {
+    margin-right: 10px;
+  }
   h1 {
     font-weight: 500;
   }

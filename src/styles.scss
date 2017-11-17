@@ -3,3 +3,20 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~font-awesome/css/font-awesome.css';
 @import "~fullpage.js/dist/jquery.fullpage.css";
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+a {
+  color: lightgray;
+  @include transition(color .3s);
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}

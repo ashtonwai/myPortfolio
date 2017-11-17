@@ -26,6 +26,7 @@
     "core-js": "^2.4.1",
     "firebase": "^4.6.0",
     "font-awesome": "^4.7.0",
+    "ng-bootstrap": "^1.6.3",
     "ngx-fullpage": "^4.0.6",
     "rxjs": "^5.4.2",
     "typed.js": "^2.0.6",
