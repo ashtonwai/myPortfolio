@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-hello',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hello.component.scss']
 })
 export class HelloComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit() {
+    const typed = new Typed('#typed', {
+      stringsElement: '#typedStrings',
+      typeSpeed: 40,
+      autoInsetCss: false
+    });
   }
-
 }
