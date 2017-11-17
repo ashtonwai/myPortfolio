@@ -1,0 +1,18 @@
+.info-group:not(:last-child) {
+  margin: 30px 0;
+  & > .row:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.icon-divider {
+  width: 2px;
+  height: 20px;
+  margin: 0 10px;
+  background-color: #000;
+}
+.platforms > i {
+  margin-right: 1rem;
+}
+.links > a {
+  margin-left: 1rem;
+}

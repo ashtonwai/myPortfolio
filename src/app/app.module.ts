@@ -13,6 +13,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FullpageComponent } from './components/fullpage/fullpage.component';
 import { HelloComponent } from './components/fullpage/hello/hello.component';
+import { ProjectComponent } from './components/fullpage/project/project.component';
+import { ProjectInfoComponent } from './components/fullpage/project/project-info/project-info.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HelloComponent } from './components/fullpage/hello/hello.component';
     HelloComponent,
     NavbarComponent,
     FooterComponent,
-    FullpageComponent
+    FullpageComponent,
+    ProjectComponent,
+    ProjectInfoComponent
   ],
   imports: [
     BrowserModule,
