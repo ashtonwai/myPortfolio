@@ -6,16 +6,18 @@ import { MnFullpageModule } from 'ngx-fullpage';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './components/hello/hello.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FullpageComponent } from './components/fullpage/fullpage.component';
+import { HelloComponent } from './components/fullpage/hello/hello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    FullpageComponent
   ],
   imports: [
     BrowserModule,
