@@ -13,13 +13,9 @@
   </div>
   <div class="section fp-section fp-table" data-anchor="projects">
     <div class="fp-tableCell">
-      <div class="slide">
-        <div *ngFor="let project of projects$ | async">
-          {{ project | json }}
-        </div>
-      </div>
-      <div class="slide">
-        Slide 2
+      <div *ngFor="let project of projects$ | async; last as isLast" class="slide">
+        {{ project.title }}
+        {{ isLast ? rebuild() : null }}
       </div>
     </div>
   </div>

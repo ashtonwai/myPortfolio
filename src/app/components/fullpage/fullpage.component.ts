@@ -1,5 +1,5 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { MnFullpageOptions, MnFullpageService } from 'ngx-fullpage';
+import { Component, Input, ViewEncapsulation, ViewChild } from '@angular/core';
+import { MnFullpageOptions, MnFullpageService, MnFullpageDirective } from 'ngx-fullpage';
 import { ProjectService } from '../../services/project.service';
 
 @Component({
@@ -16,11 +16,20 @@ export class FullpageComponent {
     anchors: ['hello', 'projects'],
     controlArrows: false
   });
+  @ViewChild(MnFullpageDirective) fullpage: MnFullpageDirective;
   projects$;
+  loaded: boolean;
 
   constructor(
     public fullpageService: MnFullpageService,
     private projectService: ProjectService) {
     this.projects$ = projectService.getAll();
+  }
+
+  rebuild() {
+    if (this.loaded) return;
+    this.fullpageService.destroy('all');
+    this.fullpage.ngOnInit();
+    this.loaded = true;
   }
 }
