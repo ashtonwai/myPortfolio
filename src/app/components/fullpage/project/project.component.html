@@ -1,13 +1,21 @@
 <div class="project">
+  <div class="row d-lg-none d-xl-none">
+    <div class="col-12 text-center">
+      <img class="img-fluid project-image-sm" [src]="project.image" [alt]="project.title" />
+    </div>
+  </div>
+  <hr class="horizontal-divider d-lg-none d-xl-none">
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-5 col-xl-4">
       <app-project-info [project]="project"></app-project-info>
     </div>
     <div class="col-1">
-      <div class="divider"></div>
+      <div class="vertical-divider"></div>
     </div>
-    <div class="col-lg-7">
-      <img class="img-fluid" [src]="project.image" [alt]="project.title" />
+    <div class="col-lg-6 col-xl-7 d-none d-lg-block">
+      <div class="d-flex flex-column justify-content-center h-100">
+        <img class="img-fluid" [src]="project.image" [alt]="project.title" />
+      </div>
     </div>
   </div>
 </div>
