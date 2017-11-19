@@ -1,3 +1,6 @@
-<app-navbar></app-navbar>
-<app-fullpage></app-fullpage>
-<app-footer></app-footer>
+<div class="main" [class.slide-left]="isOpen">
+  <app-navbar (onToggle)="onToggle($event)"></app-navbar>
+  <app-fullpage></app-fullpage>
+  <app-footer></app-footer>
+</div>
+<app-sidebar [isOpen]="isOpen"></app-sidebar>

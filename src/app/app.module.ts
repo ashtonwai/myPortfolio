@@ -15,6 +15,7 @@ import { FullpageComponent } from './components/fullpage/fullpage.component';
 import { HelloComponent } from './components/fullpage/hello/hello.component';
 import { ProjectComponent } from './components/fullpage/project/project.component';
 import { ProjectInfoComponent } from './components/fullpage/project/project-info/project-info.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProjectInfoComponent } from './components/fullpage/project/project-info
     FooterComponent,
     FullpageComponent,
     ProjectComponent,
-    ProjectInfoComponent
+    ProjectInfoComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

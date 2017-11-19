@@ -1,29 +1,4 @@
-$code-font: monaco, Consolas, "Lucida Console", monospace;
-
-@mixin animation($animation) {
-  -webkit-animation: $animation;
-  -moz-animation: $animation;
-  -ms-animation: $animation;
-  -o-animation: $animation;
-  animation: $animation;
-}
-@mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-      @content
-  }
-  @-moz-keyframes #{$name} {
-      @content
-  }
-  @-ms-keyframes #{$name} {
-      @content
-  }
-  @-o-keyframes #{$name} {
-      @content
-  }
-  @keyframes #{$name} {
-      @content
-  }
-}
+@import '../../../../sass/mixins.scss';
 
 .me {
   width: 250px;
@@ -43,7 +18,7 @@ $code-font: monaco, Consolas, "Lucida Console", monospace;
   }
 }
 .code-box {
-  font-family: $code-font;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 16px;
   min-height: 200px;
   padding: 30px 40px;

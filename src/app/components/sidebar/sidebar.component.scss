@@ -1,0 +1,38 @@
+@import '../../../sass/mixins.scss';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -225px;
+  width: 225px;
+  height: 100vh;
+  padding: 10px;
+  z-index: 1;
+  background-color: #252525;
+  @include transition(transform .7s ease-in-out);
+}
+.slide-left {
+  @include transform(translateX(-225px));
+}
+.nav-item {
+  width: 100px;
+  margin: 5px auto;
+  text-align: center;
+  @include transition(color .3s);
+  &::after {
+    display: block;
+    width: 0;
+    border-bottom: 2px solid lightgray;
+    content: '';
+    @include transition(width .3s);
+  }
+  &.active > a, &:hover > a {
+    color: #f7f7f7;
+  }
+  &.active::after, &:hover::after {
+    width: 100%;
+  }
+  .nav-link {
+    color: lightgray;
+  }
+}

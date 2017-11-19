@@ -6,7 +6,7 @@
       data-menuanchor="hello">
       <img class="h-100" src="assets/logo.png" alt="Logo" />
     </a>
-    <ul class="navbar-nav menu">
+    <ul class="navbar-nav menu d-none d-sm-flex">
       <li class="nav-item" data-menuanchor="hello">
         <a class="nav-link" href="#hello">Hello</a>
       </li>
@@ -17,5 +17,13 @@
         <a class="nav-link" href="#">Resume</a>
       </li>
     </ul>
+    <div
+      class="sidebar-btn d-sm-none"
+      [class.active]="sidebarActive"
+      (click)="toggleSidebar()">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
   </div>
 </nav>

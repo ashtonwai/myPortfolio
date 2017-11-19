@@ -1,0 +1,10 @@
+@import '../sass/_mixins.scss';
+
+.main {
+  position: relative;
+  z-index: 2;
+  @include transition(transform .7s ease-in-out);
+}
+.slide-left {
+  @include transform(translateX(-225px));
+}

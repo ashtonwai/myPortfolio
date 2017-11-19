@@ -1,10 +1,4 @@
-@mixin transition($transition...) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
+@import '../../../sass/_mixins.scss';
 
 .navbar {
   position: absolute;
@@ -16,6 +10,7 @@
     width: 100px;
     margin: 0 0.5rem;
     text-align: center;
+    @include transition(color .3s);
     &::after {
       display: block;
       width: 0;
@@ -26,6 +21,26 @@
     &.active::after, &:hover::after {
       width: 100%;
     }
+  }
+}
+.sidebar-btn {
+  cursor: pointer;
+  .bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #000;
+    @include transition(all .7s ease);
+  }
+  &.active .top {
+    @include transform(translateY(7px) rotateZ(45deg));
+  }
+  &.active .bottom {
+    @include transform(translateY(-7px) rotateZ(-45deg));
+  }
+  &.active .middle {
+    width: 0;
   }
 }
 
@@ -42,7 +57,7 @@
       flex-direction: row;
       .nav-item {
         width: 80px;
-        margin: 0.25rem;
+        margin: 0 0.25rem;
       }
     }
   }

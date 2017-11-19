@@ -11,10 +11,12 @@ import { ProjectService } from '../../services/project.service';
 export class FullpageComponent {
   @Input() public options: MnFullpageOptions = new MnFullpageOptions({
     menu: '.menu',
-    css3: true,
-    scrollingSpeend: 1000,
     anchors: ['hello', 'projects'],
-    controlArrows: false
+    paddingTop: '60px',
+    paddingBottom: '60px',
+    scrollingSpeend: 1000,
+    controlArrows: false,
+    css3: true
   });
   @ViewChild(MnFullpageDirective) fullpage: MnFullpageDirective;
   projects$;
